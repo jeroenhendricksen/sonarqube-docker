@@ -1,4 +1,4 @@
-# Quality & Assurance using Sonarqube
+# Quality & Assurance using SonarQube
 
 ## About
 
