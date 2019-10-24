@@ -25,14 +25,14 @@ The SonarQube Community Edition suppports analysis of a single branch for a repo
 1. Run the analysis for a *maven* project
 
     1. Go to the project root (where the project' root `pom.xml` file resides).
-    1. Run sonar analysis: `mvn sonar:sonar -Dsonar.host.url=http://localhost:9000`.
+    1. Run sonar analysis: `mvn sonar:sonar -Dsonar.host.url=http://localhost:9000`
     1. Now analyze the results via the SonarQube Web UI: [http://localhost:9000](http://localhost:9000).
 
 1. Run the analysis for a *gradle* project
 
     1. Go to the project root (where the project' root `build.gradle` file resides).
     1. Ensure your `build.gradle` file was set-up for sonarqube. Read more at [SonarQube for gradle](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-gradle/) and/or look at this [example build.gradle with SonarQube support](https://github.com/SonarSource/sonar-scanning-examples/blob/master/sonarqube-scanner-gradle/build.gradle).
-    1. Run sonar analysis: `gradle -Dsonar.host.url=http://localhost:9000 -Dsonar.verbose=true sonarqube`.
+    1. Run sonar analysis: `gradle -Dsonar.host.url=http://localhost:9000 -Dsonar.verbose=true sonarqube`
     1. Now analyze the results via the SonarQube Web UI: [http://localhost:9000](http://localhost:9000).
 
 ## IntelliJ integration using sonarlint
