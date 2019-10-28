@@ -32,6 +32,24 @@ The SonarQube Community Edition suppports analysis of a single branch for a repo
 
     1. Go to the project root (where the project' root `build.gradle` file resides).
     1. Ensure your `build.gradle` file was set-up for sonarqube. Read more at [SonarQube for gradle](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-gradle/) and/or look at this [example build.gradle with SonarQube support](https://github.com/SonarSource/sonar-scanning-examples/blob/master/sonarqube-scanner-gradle/build.gradle).
+        1. I had to add these blocks to my `build.gradle` file:
+
+            ```gradle
+            plugins {
+                id "org.sonarqube" version "2.7"
+            }
+            ```
+
+            and (optionally)
+
+            ```gradle
+            sonarqube {
+                properties {
+                    property 'sonar.projectName', 'PROJECTNAME'
+                }
+            }
+            ```
+
     1. Run sonar analysis: `gradle -Dsonar.host.url=http://localhost:9000 -Dsonar.verbose=true sonarqube`
     1. Now analyze the results via the SonarQube Web UI: [http://localhost:9000](http://localhost:9000).
 
