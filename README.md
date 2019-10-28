@@ -11,7 +11,7 @@ The SonarQube Community Edition suppports analysis of a single branch for a repo
 - docker
 - docker-compose
 - a Java or Kotlin project that uses maven as build-tool
-- port `9000` must be free on your machine (you can change this in de `docker-compose.yml`)
+- port `9000` must be free on your machine (you can change this in the `docker-compose.yml`)
 
 ## Usage
 
