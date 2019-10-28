@@ -50,7 +50,7 @@ The SonarQube Community Edition suppports analysis of a single branch for a repo
             }
             ```
 
-    1. Run sonar analysis: `gradle -Dsonar.host.url=http://localhost:9000 -Dsonar.verbose=true sonarqube`
+    1. Run sonar analysis: `gradle -Dsonar.host.url=http://localhost:9000 -d sonarqube`. `-d` is added for debugging the SonarQube analysis performed. Any sonarqube related messages should contain the string `org.sonarqube.gradle`, so you can filter the output using `grep`.
     1. Now analyze the results via the SonarQube Web UI: [http://localhost:9000](http://localhost:9000).
 
 ## IntelliJ integration using sonarlint
