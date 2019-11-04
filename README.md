@@ -9,7 +9,7 @@ The SonarQube Community Edition suppports analysis of a single branch for a repo
 ## Prerequisites
 
 - docker
-- docker-compose
+- docker-compose 1.24 (or newer)
 - a Java or Kotlin project that uses maven as build-tool
 - port `9000` must be free on your machine (you can change this in the `docker-compose.yml`)
 
@@ -52,6 +52,18 @@ The SonarQube Community Edition suppports analysis of a single branch for a repo
 
     1. Run sonar analysis: `gradle -Dsonar.host.url=http://localhost:9000 -d sonarqube`. `-d` is added for debugging the SonarQube analysis performed. Any sonarqube related messages should contain the string `org.sonarqube.gradle`, so you can filter the output using `grep`.
     1. Now analyze the results via the SonarQube Web UI: [http://localhost:9000](http://localhost:9000).
+
+## Known issues
+
+When you see sonarqube output this error in the logs...
+
+`max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]`
+
+...you should increase the `vm.max_map_count`:
+
+```bash
+sysctl -w vm.max_map_count=262144
+```
 
 ## IntelliJ integration using sonarlint
 
